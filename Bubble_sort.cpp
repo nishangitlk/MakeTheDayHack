@@ -25,18 +25,30 @@ void bubbleSort(int *array, int size) {
          break;       // No swap in this pass, so array is sorted
    }
 }
-int main() {
-   int n;
-   cout << "Enter the number of elements: ";
-   cin >> n;
-   int arr[n];     //create an array with given number of elements
-   cout << "Enter elements:" << endl;
-   for(int i = 0; i<n; i++) {
-      cin >> arr[i];
-   }
-   cout << "Array before Sorting: ";
-   display(arr, n);
-   bubbleSort(arr, n);
-   cout << "Array after Sorting: ";
-   display(arr, n);
-}
+# Bubble sort in Python
+
+def bubbleSort(array):
+    
+  # loop to access each array element
+  for i in range(len(array)):
+
+    # loop to compare array elements
+    for j in range(0, len(array) - i - 1):
+
+      # compare two adjacent elements
+      # change > to < to sort in descending order
+      if array[j] > array[j + 1]:
+
+        # swapping elements if elements
+        # are not in the intended order
+        temp = array[j]
+        array[j] = array[j+1]
+        array[j+1] = temp
+
+
+data = [-2, 45, 0, 11, -9]
+
+bubbleSort(data)
+
+print('Sorted Array in Ascending Order:')
+print(data)
